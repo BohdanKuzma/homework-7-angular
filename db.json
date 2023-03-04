@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "title": "Gauel",
+      "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor aperiam, velit praesentium eius architecto temporibus facilis ipsum aliquid quasi atque quod sunt. Facilis recusandae deserunt ipsam reprehenderit fugiat? Quasi, nulla?",
+      "author": "ivan",
+      "img": "https://kpopping.com/documents/11/0/1536/230224-IVE-Twitter-Update-Gaeul-documents-4.jpeg?v=95233",
+      "id": 1
+    },
+    {
+      "title": "Yuna ",
+      "text": "Lorem, ipsum dolor sit amet consectetur adipisicin",
+      "author": "bohdan",
+      "img": "https://kpopping.com/documents/c3/1/1440/230202-ITZY-Instagram-Update-Yuna-documents-1(1).jpeg?v=1301c",
+      "id": 2
+    },
+    {
+      "title": "Jimin",
+      "text": "Lorem, ipsum dolor sit amet consectetur adipisicin dsad",
+      "author": "oleh",
+      "img": "https://kpopping.com/documents/05/3/1771/230218-aespa-Karina-Circle-Chart-Music-Awards-2022-Red-Carpet-documents-3.jpeg?v=88f18",
+      "id": 3
+    }
+  ]
+}

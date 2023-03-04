@@ -1,0 +1,13 @@
+<div class="container-fluid d-flex mt-4" style="flex-wrap:wrap">
+
+  <div class="card col-3 mx-2 my-2" *ngFor="let post of userPosts">
+    <img [src]="post.img"
+      class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{post.author}}</h5>
+      <h3 class="card-title">{{post.title}}</h3>
+      <p class="card-text">{{post.text}}</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,61 @@
+<div class="container">
+  <form class="mt-5">
+
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="title here..." 
+      [(ngModel)]="title" name="title">
+    </div>
+
+    <div class="mb-3">
+      <textarea class="form-control" placeholder="text here..." id="floatingTextarea2" style="height: 100px" 
+      [(ngModel)]="text" name="text"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <input type="text" class="form-control" placeholder="author here..." 
+      [(ngModel)]="author" name="author">
+    </div>
+
+
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="link img..." 
+        [(ngModel)]="imgPath" name="imgPath">
+      </div>
+
+    <button type="button" class="btn btn-success" *ngIf="!editStatus" [disabled]="!title || !text || !author || !imgPath" (click)="addPost()">Add</button>
+    <button type="button" class="btn btn-primary" *ngIf="editStatus" [disabled]="!title || !text || !author || !imgPath" (click)="savePost()">Save</button>
+  </form>
+
+</div>
+
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Text</th>
+        <th scope="col">Author</th>
+        <th scope="col">Image</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of adminPosts">
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.text | slice:0:50}} <span *ngIf="post.text.length > 50">...</span> </td>
+        <td>{{post.author}}</td>
+        <td><img [src]="post.img" width="80px" alt=""></td>
+        <td>
+            <button type="button" class="btn btn-warning" (click)="editPost(post)">Edit</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger" (click)="deletePost(post.id)" [disabled]="editStatus">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
